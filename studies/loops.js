@@ -45,10 +45,10 @@ brown
 */
 
 // 3. While Loops
-var count = 0
+var count = 0;
 while(count < 5){
     console.log(count);
-    count ++
+    count ++; 
 }
 
 // print => 0 1 2 3 4 5 
