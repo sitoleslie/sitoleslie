@@ -19,6 +19,39 @@ var p = 5.6;
 var firstName = 'Leslie' // single quotes
 var lastName = "Guan" // double quotes 
 
+// How do we access individual characters in a string:
+// Characters are indexes from left to right. The first index will start at 0 and ending in .length-1 
+
+// charAt() method will access a specific character in a string 
+// syntax : string.charAt(index);
+
+
+var charString = 'characters';
+
+console.log(charString.charAt(1));
+
+// prints => h 
+// This will print 'h' because it is the second index. 
+
+
+
+// How to access values in a string: 
+
+var string = 'sentence';
+console.log(string[0]); 
+
+// prints => s
+// using bracketnotation to access characters in a string starting at 0
+
+var string2 = 'Hello';
+console.log(string2[string2.length-1]); 
+
+
+// prints => o 
+// This will print the character 'o' by using .length-1 to access the last character 
+
+
+
 // 3. Boolean:
 // Booleans are true or false statements.
 
@@ -118,13 +151,16 @@ console.log(testScore);
 // prints => undefined 
 
 // 8. Null 
-// Nothing
+// It is an assignment value that is an absence of an object or no value
+// It is used to get rid of a variable off it's assigned value by assigning it to 'null'
 
 var person = {
     firstName:"Les", lastName:"Guan", age:24
 };
 person = null;  
 // prints => null
+
+
 
 // 9. NaN
 // NaN means it is NOT-a-Number. 
@@ -160,22 +196,27 @@ console.log(-5 / 0)
 // Complex data types:
 //Arrays and Object are complex data types because it has a it's own method unlike Simple data types.
 
-// 12. Primitive values are passed to a function BY COPY, they are copied by value.
+// 12. Primitive values are copy by value to a new variable. 
+// This is an example of simple data type because they are storied in variables. 
 
 
 var x = 1;
-var y = 2;
-var a = x;
-var b = y;
+var y = 'guan';
 
-console.log(x, y, a, b);
+console.log(x, y);
 
-// prints => 1 2 1 2
+// prints => 1 'guan'
 
-// The variable x and a = 1. Then, b and y = 2. The values were copies, although they're two different variables. 
+var c = x;
+var d = y;
 
-// Reference
-// The complex data type, Object is copied by reference. 
+console.log(x, y, c, d);
+
+
+// Copy by reference: 
+
+// This is a complex datatype such as an array or an object because they are not stored in variables like simple datatypes. 
+//Therefore, they are copied by reference. 
 
 var object1 = [5];
 var object1Copy = object1; 
