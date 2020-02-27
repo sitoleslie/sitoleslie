@@ -434,6 +434,13 @@ _.partition = function (array, fun) {
 *   _.map([1,2,3,4], function(e){return e * 2}) -> [2,4,6,8]
 */
 
+// add a new array to hold our new array
+// call our _.each function expression because it will complete some of our objectives 
+// it has already created a for loop to loop over the collection if it is an array
+//  call the function with it's three arguments: E, I, C
+// push fun function into the new array with it's element, index, collection
+// output: new array 
+
 _.map = function(collection,fun){
     let newArray = [];
     _.each(collection, function(element,index, collection){
@@ -453,6 +460,13 @@ _.map = function(collection,fun){
 * Examples:
 *   _.pluck([{a: "one"}, {a: "two"}], "a") -> ["one", "two"]
 */
+
+// create a new array to hold our new values 
+// assign the variable to our previous _.map function expression
+// because, it already has specific codes that will help us get to our objective 
+// now the output must be an array with the function of E, I, C
+// the element with the values of property will be returned 
+// output: return the ne array 
 
 
 _.pluck = function (array, property) {
@@ -489,9 +503,16 @@ _.pluck = function (array, property) {
 *   _.every([1,2,3], function(e){return e % 2 === 0}) -> false
 */
 
+// check if fun is not a function
+// if the condtion is true, it will return our _.contain function expression
+
+// create a new array to hold our new value
+// assign our new array to our _.map function expression which will have two arguments of our collection and function
+// now it will return our _.contain function expression 
+
 
 _.every = function (collect, fun) {
-   if (typeof(fun) !== 'function') {
+   if (typeof(fun) !== 'function'){
       return !_.contains(collect, false);
    }
     var newArray = [];
@@ -532,6 +553,12 @@ _.some = function(collect, fun){
 };
 
 
+// check if fun is not a function
+// if the condtion is true, it will return our _.contain function expression
+
+// create a new array to hold our new value
+// assign our new array to our _.map function expression which will have two arguments of our collection and function
+// now it will return our _.contain function expression 
 
 
 
@@ -557,6 +584,17 @@ _.some = function(collect, fun){
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
 
+
+// declare a variable named previousResult 
+// create a control flow of if, else if, and else statement
+// first if seed is not given it will use the first element/ value and go onto the next (array[0])
+// now a for loop is created to loop through the array 
+// create a nested control flow 
+// this will start the next iteration 
+// and return the prervious reselt 
+// an else if statement will check if it does not equal the loast iteration
+// the output will return the value of the function call
+// else it will return the function call with it's three arugments 
 _.reduce = function(array, fun, seed){
  var previousResult;
  if (seed == undefined){
@@ -601,12 +639,15 @@ _.reduce = function(array, fun, seed){
 
 
 
-_.extend = function(...array){
-    
-    
-    
-    
-}
+_.extend = function (...array){
+   // loop through the array of Objects
+   for (let i = 1; i < array.length; i++){
+         // use the assign method to replace the first object the others
+         Object.assign(array[0], array[i]);
+     }
+     // Done, return the first array.
+     return array[0];
+   };
 
 
 
