@@ -297,22 +297,12 @@ _.unique = function(array){
     var arr = [];
     for (var i = 0; i < array.length; i++){
       if (_.indexOf(array, array[i]) >= 0 && _.indexOf(arr,array[i]) === -1){
-        arr.push(array[_.indexOf(array, array[i])])
+        arr.push(array[_.indexOf(array, array[i])]);
       }
     }
     return arr;
-    if (typeof(collection) === 'object') {
-        for (var key in collection){
-            fun2(collection[key], key, collection);
-    
-    
-    
-}
 
-
-}
-
-}
+};
 /** _.filter
 * Arguments:
 *   1) An array
