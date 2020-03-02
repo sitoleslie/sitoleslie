@@ -184,10 +184,10 @@ if (!Array.isArray(array) || number < 0) {
 //then create an if statement to compare if the index of that array is strictly equal to the value 
 // return -1 if it does not
 _.indexOf = function (array, value) {
-    
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === value){ return i; }
-    } return -1;
+  if(Array.isArray){
+       //returning the first occurance of the value
+       return array.indexOf(value);
+   }
 };
 
 /** _.contains
@@ -327,15 +327,17 @@ _.unique = function(array){
 // finally, return your newArray
 
 _.filter = function (array, fun) {
+   
+  let filterArr = [];
+
+  for (var i = 0; i < array.length; i++) {
     
-    var newArray = [];
-    for (let i = 0; i < array.length; i++){
-    if (fun(array[i], i, array)) {
-    newArray.push(array[i]);
-    }
+     if(fun(array[i], i, array)) {
+          filterArr.push(array[i]);
+      }
+  }
+     return filterArr;
 }
-return newArray;
-};
 
 
 
