@@ -233,60 +233,92 @@ function isFriend(name, object) {
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+
+
+// declare and assign a function to nonFriends
+// input: name and array 
 function nonFriends(name, array) {
+    // declare two empty arrarys to hold the new values 
  var nameList = [];
     var result = [];
-    var current = null;
+    // declare a variable named current and assign it to null 
+    var current = null; 
+    // implement an array to iterate through the array 
     for(var i=0; i<array.length; i++){
+        // create a condition statement to check if the name and the array's element name are the same 
         if(name === array[i].name){
+            // reassign the current variable to the array's element 
             current = array[i];
-        }else{
+        }else{ 
+            // if the condition above is false, and this is true 
+            // push the array's element name into the nameList Array 
             nameList.push(array[i].name);
         }
     }
+    // create a condition statement to check if the current is null
+    // if it checks out true, then it will return the nameList 
     if(current === null){
-        return nameList;
-    }
+        return nameList; 
+    } 
+    // implement a for loop to iterate through the nameList arrays 
     for(var i=0; i<nameList.length; i++){
         if(current.friends.indexOf(nameList[i]) == -1){
             result.push(nameList[i]);
         }
     }
-    return result;
+    return result; // return the result array 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// declare and assign a function to updateObject
+//it will take on three inputs: object, the key, and value 
+
 function updateObject(object, key, value) {
+    // assign a new value to the object key variable 
 object[key] = value;
-  return object;
+  return object; // return the object 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 15 - Remove Properties ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// declare and assign a function to removeProperties 
+// it will have an input of an object and array 
 function removeProperties(object, array) {
+    // implement a for loop to iterate through the array 
 for(var i = 0; i < array.length; i++){
+    // implement a for in loop to iterate through the object 
     for(var key in object){
+        // now create a condition statement 
+        // if the array's element is strictly equal to the key 
         if(array[i] === key){
+            // delete the object's key
             delete object[key];
         }
     }
-}return object;
+}return object; // done, return object 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 16 - Dedup ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+
+// declare and assign a function to dedup 
+// it will have an array as an input 
 function dedup(array) {
+    // create a new variable, it will store the new data 
+    // use filter method, it will filter out the duplicated elements 
 var newArray = array.filter(function(item, pos) {
+    // indexOf method will return the first position of the first apperance 
+    // it will compare that to the pos 
     return array.indexOf(item) == pos;
 });
-return newArray;
+return newArray; // return the newArray! DONE
 }
 
 //////////////////////////////////////////////////////////////////////
