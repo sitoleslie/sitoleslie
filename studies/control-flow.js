@@ -6,13 +6,18 @@
 * 2. Else if is a condtional statement that will perform as action based on if the if boolean is false. If it is false, it will execute, the else if's code block. 
 * 3. Else will run when all the conditonal statements are false. Then, it will execute the else's code block.
 * 4. Switch statement will check for specific condtion when the list is very long.
+* 5. If there are multiple conditions that need to be tested it will chain onto that one If statement. 
+* An else statement can be chain on to the end as a default action, if all the above tested conditions are false. 
 * 
-*If: Let's Java script know you're running an if statement code *NOTE: an if statement will start a new connditional statement flow 
+* 
+* 
+*If: Let's Java script know you're running an if statement code *NOTE: an if statement will start a new conditional statement flow 
 *condition: conditions go inside the () this is an expression that will evaulate a boolean value 
 *block of code: a block of code will be excuted in curly braces {} if it is true
-* Else if: can take on x amount of conditional else if's statementd
+* Else if: can take on x amount of conditional else if's statements
 *Else: can only take on one statement with no condition and only a return statement in curly braces 
 */
+
 
 
 

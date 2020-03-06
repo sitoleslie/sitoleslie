@@ -104,8 +104,21 @@ console.log(arrList);
 
 // prints => [true, 'string', 8];
 
+
+
+// Accessing values in an array by using bracket notation []: 
+let arr = ['Hi']
+console.log(arr[0]); // => 'Hi'
+
+// Accessing the last value in an array by using bracket notation []:
+let myArray = [1,2,3,4,'hi'];
+console.log(myArray[myArray.length - 1]);  // => 'hi'
+
 // 5. Object
 // A complex data type that is a collection of key/key value pairs.
+// Object values can be any datatypes
+// Object keys are string datatypes
+
 
 // Objects are created with {} and separated with commas 
 var university = {
@@ -118,6 +131,21 @@ var university = {
 
 console.log(university);
 // prints => { name: 'UNO', typeofSchool: 'college', city: 'New Orleans' }
+
+// Accessing values in an object with dot notation or bracket notation:
+let personObj = {
+name: 'Leslie',
+age: 25,
+city: 'Nola',
+pets: true 
+}
+
+console.log(personObj.name);
+// prints => Leslie 
+console.log(personObj['city']);
+// prints => Nola 
+
+
 
 
 // 6. Function
@@ -213,11 +241,16 @@ var d = y;
 console.log(x, y, c, d);
 
 
+
+/**Copy by reference vs Copy by value; 
+*0. Copy by reference applies to complex data types: arrays or objects. 
+* It is not stored in the variable itself but the variable will copy by reference  
+* 1. Copy by value applies to simple data types because it is stored in the variable itself.
+* 
+* 
+* */
+
 // Copy by reference: 
-
-// This is a complex datatype such as an array or an object because they are not stored in variables like simple datatypes. 
-//Therefore, they are copied by reference. 
-
 var object1 = [5];
 var object1Copy = object1; 
 
@@ -225,3 +258,11 @@ console.log(object1Copy);
 
 // prints => [5]
 
+// Copy by value:
+
+let num1 = 5;
+
+let num2 = num1; 
+console.log(num2); 
+
+// prints => 5 because the value in num1 will get copied to num2
