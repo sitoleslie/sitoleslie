@@ -74,8 +74,25 @@ brown
 // and print out in order of the key/values being accessed 
 
 // 3. While Loops
+
+// syntax:
+
+
+
+
+/* while (condition) {
+code block to be executed
+}
+*/
+
+
+// syntax explanation: 
 // while is a keyword that will let JS know it is looping through a block of code until the condition is false
 // the condition will be expressed inside ()
+// the code block will be excuted in the function body which it is inside {} 
+
+
+
 
 var count = 0;
 while(count < 5){

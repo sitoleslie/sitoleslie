@@ -118,7 +118,7 @@ animal = 'dog';
 *It will happen before the variable has a value. Variable decelaration runs first. 
 * Initialization are not hoisted. The varaible must be declared at the top!
 */ 
-// prints => dog 
+// prints => undefined 
 
 // 2. Let and Const 
 // Let and Const can only be hoisted when thse variable is declared on the same line.

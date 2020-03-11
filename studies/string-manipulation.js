@@ -20,6 +20,49 @@ console.log(houseItems.join('.'));
 // prints => Toys.Shoes.Blankets
 
 
+// 3. Reassigning using operators:
+// += -= *= /= %/
 
 
+var insect = 'butter';
+insect += 'fly';
+console.log(insect); // => butterfly 
+// the variable insect is being reassigned and concated at the same time 
 
+// 4. Trim method: this method will remove any unnecessary whitespaces before or after a string
+var str = "       Welcome!        ";
+console.log(str.trim());
+
+// prints => 'Welcome'
+
+// 5. upperCase() or lowerCase()
+// this can change a character in a string from lowercase to uppercase or vice versa
+
+ // example of casing to uppercase
+
+ let toLowerCase = 'hello';
+
+ toLowerCase = toLowerCase.toUpperCase();
+
+ console.log(toLowerCase); // => 'HELLO' 
+ // all the chars in this string will not change to caps
+ 
+ // example to casing to lowercase: 
+
+ var toUpperCase = "LOWERCASE";
+
+ toUpperCase = toUpperCase.toLowerCase();
+
+ console.log(toUpperCase); // => 'lowercase'
+ //  // all the chars in this string will not change to lower case 
+
+
+// 6. replace method 
+// you can change a specific value, and return a new string at the replacement of that specific value 
+
+var replaceStr = 'I am working-out!';
+
+replaceStr = replaceStr.replace('working-out','eating');
+
+console.log(replaceStr);
+ // print => I am working-out, eating got replaced
